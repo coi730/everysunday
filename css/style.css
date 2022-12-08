@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/*reset*/
+* {margin: 0; padding: 0; box-sizing: border-box;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+img {vertical-align: top;}
+body {font-family: 'Noto Sans KR', sans-serif; color: #2D2D2D;}
+
+/*layout*/
+.container {width: 1640px; margin: 0 auto;}
+#header {width: 100%; height: 940px; margin: 0 auto;}
+.nav-container {width: 1700px; margin: 0 auto; position: relative; height: 850px;}
+
+/*header*/
+#header h1{width: 224px; height: 223px; margin-left: 30px;}
+#header nav{width: 1700px; background: #fff; height: 90px; border-radius: 10px; display: flex; justify-content: space-between;}
+#header nav .center{display: flex; margin-top: 30.5px;}
+#header nav .center li{font-size: 20px; font-weight: 600; color: #656565; margin-right: 100px;}
+#header nav .center li:hover {color: #F57D14;}
+
+#header nav .right{display: flex; margin-top: 35px;}
+#header nav .right li{color: #656565; margin-right: 20px; font-size: 15px; font-weight: normal;}
+#header nav .right li:first-child {margin-right: 0px;}
+#header nav .right li:nth-child(2) img{ margin-top: 5px; margin-left: 5px; width: 15px; height: 15px;} 
+#header nav .right li:last-child {margin-right: 0px;} 
+#header nav .right li:last-child img{margin-right: 30px;} 
+#header nav .right li img{width: 20px; height: 20px;}
+
+#header .banner {background: url('../image/banner1.jpg') no-repeat center; height: 940px; width: 100%; padding-top: 20px;}
+
+/*scroll down*/
+.slidebtn {position: absolute; left: 50%; bottom: 0;}
+#thanks {background-color: #fff;}
+#thanks::after {content: none;}
+#thanks div { position: absolute; top: 50%; left: 50%; z-index: 2; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; }
+.demo a { position: absolute; left: 50%; z-index: 2; display: inline-block; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); color: #fff; font : normal 400 20px/1 'Josefin Sans', sans-serif; letter-spacing: .1em; text-decoration: none; transition: opacity .3s;}
+.demo a:hover {opacity: .5;}
+.slidebtn a {padding-top: 60px;} /*글자에 패팅을 줘서 그 패딩공간안에 쟤를 넣음*/
+.slidebtn a span {position: absolute; top: 0; left: 50%; width: 30px; height: 50px; margin-left: -15px; border: 2px solid #fff; border-radius: 50px; box-sizing: border-box;
+}/*겉에 감싸는 원*/
+.slidebtn a span::before { position: absolute; top: 10px; left: 50%; content: ''; width: 6px; height: 6px; margin-left: -3px;background-color: #fff; border-radius: 100%; -webkit-animation: sdb10 2s infinite; animation: sdb10 2s infinite; box-sizing: border-box;
+} /*이거 내려가는 구슬*/
+@-webkit-keyframes sdb10 {
+    0% { -webkit-transform: translate(0, 0); opacity: 0; }
+    40% { opacity: 1;}
+    80% {-webkit-transform: translate(0, 20px); opacity: 0;}
+    100% { opacity: 0; }
+}
+@keyframes sdb10 {
+    0% { transform: translate(0, 0); opacity: 0;}
+    40% {opacity: 1;}
+    80% {transform: translate(0, 20px);opacity: 0;}
+    100% {opacity: 0;}
+}
+/*coffeebeans*/
+.coffeebeans-wrap {overflow: hidden;}
+#coffeebeans {width: 100%; height: 940px; max-width: 1640px; margin: 0 auto;}
+#coffeebeans .coffeebeans-container {display: flex; position: relative;} 
+#coffeebeans .coffeebeans-left {margin: 180px 0 0; width: 600px;}
+#coffeebeans .coffeebeans-left .coffeebeans-title{width: 372px; position: relative;}
+#coffeebeans .coffeebeans-left .coffeebeans-title h2{font-weight: normal; font-size: 25px;}
+#coffeebeans .coffeebeans-left .coffeebeans-title .coffeebeans-title-underline{width: 150px; height: 2px; background: #F57D14; position: absolute; right: 0;}
+#coffeebeans .coffeebeans-left h3{font-size: 50px; font-weight: 600; margin-top: 12px;}
+#coffeebeans .coffeebeans-left h4{font-size: 20px; font-weight: 600; margin: 80px 0 50px 0;}
+#coffeebeans .coffeebeans-left p{font-size: 25px; width: 440px;}
+#coffeebeans .coffeebeans-left .coffeebeans-moreview{width: 141px; margin-top: 447px;}
+#coffeebeans .coffeebeans-left .coffeebeans-moreview h5{font-size: 25px; font-weight: 600;}
+#coffeebeans .coffeebeans-left .coffeebeans-moreview .moreview-underline{ width: 141px; height: 2px; background: #860C00;}
+
+#coffeebeans .coffeebeans-right {width: 100%; height: 550px; margin: 206px auto 0 150px; position: absolute;}
+#coffeebeans .coffeebeans-right .coffeebeans-slide{width: 100%; height: 100%; overflow-x: hidden;}
+#coffeebeans .coffeebeans-right .coffeebeans-slide ul {width: 2880px; height: 550px; align-items: center; }
+#coffeebeans .coffeebeans-right .coffeebeans-slide ul li{width: 720px; float: left;}  
+#coffeebeans .coffeebeans-right .coffeebeans-slide ul li:nth-child(even) {opacity: 0.3;}
+#coffeebeans .coffeebeans-right a {display: block; position: absolute; width: 44px; height: 90px; top: calc(50% - 25px);}
+#coffeebeans .coffeebeans-right a.coffeebeans-prev {right: calc(100% + 10px);}
+#coffeebeans .coffeebeans-right a.coffeebeans-next {left: 720px;}
+
+.coffeebeans-textwrap {position: relative;}
+.coffeebeans-textbox {width: 440px; height: 420px; position: absolute; top: 0; left: 0;}
+.coffeebeans-textbox:last-child {display: none;}
+/*event*/
+#event {width: 100%; margin: 0 auto;}
+#event .container {width: 100%; height: 940px; background: url('../image/cafe3.jpg') no-repeat center; padding: 63px;}
+#event .event-textbox{width: 678px; height: 814px; background: rgba(0,0,0,0.38); border-radius: 10px; margin: 0 auto; text-align: center;color: #fff;}
+#event .event-textbox .textbox-title{display: flex; justify-content: center; padding-top: 100px; align-items: center;}
+#event .event-textbox .textbox-title .title-line{width: 113px; height: 2px; background: #fff;}
+#event .event-textbox .textbox-title h2{margin: 0 27px; font-size: 50px; font-weight: 600;}
+#event .event-textbox img{margin: 110px 0 20px 0;}
+#event .event-textbox .circle{width: 6px; height: 6px; border-radius: 50%; background: #fff; margin: auto;}
+#event .event-textbox p{font-size: 30px; font-weight: normal; margin-top: 40px;}
+
+/*cookies*/
+#cookies {height: 940px; color: #2D2D2D;}
+#cookies .container {display: flex;}
+#cookies .cookies-left{margin: 110px 115px 0 0; }
+#cookies .cookies-left .cookies-title {width: 305px; position: relative;}
+#cookies .cookies-left .cookies-title h2 {font-size: 25px; font-weight: normal;}
+#cookies .cookies-left .cookies-title .cookies-title-underline{width: 90px; height: 2px; background: #F57D14; position: absolute; right: 0;}
+#cookies .cookies-left h3 {font-size: 50px; font-weight: 600; margin-top: 12px;}
+#cookies .cookies-left h4 {font-size: 20px; font-weight: 600; margin: 80px 0 50px 0;}
+#cookies .cookies-left p {font-size: 25px; width: 460px;}
+#cookies .cookies-left .cookies-moreview {width: 141px; margin-top: 60px;}
+#cookies .cookies-left .cookies-moreview h5 {font-size: 25px; font-weight: 600;}
+#cookies .cookies-left .cookies-moreview .moreview-underline{width: 141px; height: 2px; background: #860C00;}
+#cookies .cookies-right{display: flex;}
+#cookies .cookies-right img {border-radius: 10px; width: 520px; height: 520px; margin-right: 40px;}
+#cookies .cookies-right img:first-child {margin-top: 165px;}
+#cookies .cookies-right img:last-child {margin-top: 330px;}
+
+/*footer*/
+#footer {width: 100%; height: 402px; background: #191919; color: #fff;}
+#footer .footer-top {display: flex; padding: 70px 0 0 0 ;}
+#footer .footer-top .footer-logo {margin-right: 100px;}
+#footer .footer-top .footer-logo li{color: #C1C1C1; font-size: 13px; font-weight: normal; }
+#footer .footer-top .footer-logo li:last-child {margin: 20px 0 60px 0;}
+
+#footer .footer-top .footer-nav {display: flex;}
+#footer .footer-top .footer-nav .footer-title{font-size: 24px; font-weight: 600; margin-right: 100px;}
+#footer .footer-top .footer-nav .footer-title .footer-sub{margin-top: 30px;}
+#footer .footer-top .footer-nav .footer-title .footer-sub li{font-size: 13px; font-weight: normal; color: #C1C1C1; margin-bottom: 10px;}
+
+#footer .footer-bottom .footer-line{width: 1640px; height: 1px; background: #fff; margin: 20px 0 20px 0; }
+#footer .footer-bottom p {font-size: 13px; color: #C1C1C1; margin-bottom: 5px;}
